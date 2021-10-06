@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 12-Apr-2021 at 12:30:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 06-Oct-2021 at 15:51:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,8 +259,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.1</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 0.08 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 0.11 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,45 +271,32 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/random_tests/test_random_1.py::test_random_mod_1</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/db_tests/users/test_users_landing.py::TestTableValidation::test_expected_row_count[1000]</td>
+          <td class="col-duration">0.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">session_rand_num = 82, module_rand_num = 78, function_rand_num = 74<br/><br/>&gt;   ???<br/><span class="error">E   assert False</span><br/><br/>/Users/keith.knapp/dev/pytestTest/tests/random_tests/test_random_1.py:8: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Session Random Number
-Module Random Number
-Function Random Number
-<br/> ------------------------------Captured stdout call------------------------------ <br/>Session Random Num: 82
-Module Random Num: 78
-Function Random Num: 74
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Connecting to MySQL HOST: 127.0.0.1
+Retrieving DataBase Name configuration for &#x27;landing&#x27;: &#x27;LT_Landing&#x27;
+Switching DataBase to: &#x27;LT_Landing&#x27;
+Retrieving Table Name configuration for &#x27;landing&#x27;: &#x27;users&#x27;
+Running Query : SELECT *
+                FROM users
 <br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/random_tests/test_random_1.py::test_random_mod_2</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/db_tests/users/test_users_staging.py::TestTableValidation::test_expected_row_count[500]</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">session_rand_num = 82, module_rand_num = 78, function_rand_num = 94<br/><br/>&gt;   ???<br/><span class="error">E   assert False</span><br/><br/>/Users/keith.knapp/dev/pytestTest/tests/random_tests/test_random_1.py:18: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Function Random Number
-<br/> ------------------------------Captured stdout call------------------------------ <br/>Session Random Num: 82
-Module Random Num: 78
-Function Random Num: 94
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/random_tests/test_random_2.py::test_random_mod_1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">session_rand_num = 82, module_rand_num = 12, function_rand_num = 28<br/><br/>&gt;   ???<br/><span class="error">E   assert False</span><br/><br/>/Users/keith.knapp/dev/pytestTest/tests/random_tests/test_random_2.py:8: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Module Random Number
-Function Random Number
-<br/> ------------------------------Captured stdout call------------------------------ <br/>Session Random Num: 82
-Module Random Num: 12
-Function Random Num: 28
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Retrieving DataBase Name configuration for &#x27;staging&#x27;: &#x27;LT_Staging&#x27;
+Switching DataBase to: &#x27;LT_Staging&#x27;
+Retrieving Table Name configuration for &#x27;staging&#x27;: &#x27;users&#x27;
+Running Query : SELECT *
+                FROM users
 <br/></div></td></tr></tbody></table></body></html>
