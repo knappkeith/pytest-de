@@ -1,5 +1,5 @@
 import pytest
-from common_tests.TableValidation import TestTableValidation
+from common_tests.TableValidation import TestTableValidationReferentialCheck
 
 
 # Configuration for `TestTableValidation.test_expected_row_count`

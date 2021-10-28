@@ -26,3 +26,11 @@ pytest tests/db_tests/orders -m smoke -vv
 4 - Landing Marker
 
 pytest tests/db_tests/orders -m landing -vv
+
+5 - Skipif Tests
+
+pytest tests/db_tests/orders/test_orders_landing.py -vv
+
+6 - Xfail tests
+
+pytest tests/db_tests/orders/test_orders_staging.py -vv

@@ -41,3 +41,11 @@ class TestTableValidation():
                 return len(x.split(".")) == 4
         comp_df = select_df[select_df[column_name].apply(comp_func)]
         assert len(comp_df.index) == len(select_df.index)
+
+
+class TestTableValidationReferentialCheck(TestTableValidation):
+
+    @pytest.mark.skip(reason="This test is still being developed")
+    def test_referential_integrity_check(_, select_df):
+        """Future Test to ensure Referential Integrity Check"""
+        assert True
