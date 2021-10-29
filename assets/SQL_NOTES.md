@@ -6,6 +6,12 @@ CREATE DATABASE [DB_Name];
 SHOW databases;
 
 USE [DB_Name];
+
+USE LT_Staging;
+
+USE LT_Landing;
+
+DROP TABLE [TABLE_NAME];
 ```
 
 ##Create a Table:
@@ -14,6 +20,7 @@ USE [DB_Name];
 ### USERS TABLE:
 Create Table:
 ```sql
+DROP TABLE users;
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT,
     first_name VARCHAR(255) NOT NULL,
@@ -26,7 +33,7 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 Populate:
 ```sql
-LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/MOCK_DATA_user_landing.csv'  INTO TABLE users
+LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/mock_db_data/MOCK_DATA_user_landing.csv'  INTO TABLE users
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
@@ -36,6 +43,7 @@ LINES TERMINATED BY '\n';
 ### ADDR TABLE
 Create Table:
 ```sql
+DROP TABLE addr;
 CREATE TABLE IF NOT EXISTS addr (
     id INT AUTO_INCREMENT,
     address VARCHAR(255) NOT NULL,
@@ -48,7 +56,7 @@ CREATE TABLE IF NOT EXISTS addr (
 ```
 Populate:
 ```sql
-LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/MOCK_DATA_addr_landing.csv'  INTO TABLE addr
+LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/mock_db_data/MOCK_DATA_addr_landing.csv'  INTO TABLE addr
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
@@ -57,6 +65,7 @@ LINES TERMINATED BY '\n';
 ### ORDERS TABLE:
 Create Table:
 ```sql
+DROP TABLE orders;
 CREATE TABLE IF NOT EXISTS orders (
     id INT AUTO_INCREMENT,
     quanity INT NOT NULL,
@@ -68,13 +77,14 @@ CREATE TABLE IF NOT EXISTS orders (
 ```
 Populate:
 ```sql
-LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/MOCK_DATA_orders.csv'  INTO TABLE orders
+LOAD DATA LOCAL INFILE '/Users/keith.knapp/dev/pytest-de/assets/mock_db_data/MOCK_DATA_orders.csv'  INTO TABLE orders
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 ```
 
 
+## ERRORS
 If you get error `Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides` from `LOAD DATA LOCAL` Command:
 
 ```sql
